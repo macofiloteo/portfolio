@@ -1,0 +1,24 @@
+<mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+        Projects
+    </mat-expansion-panel-header>
+    <mat-grid-list cols="3">
+        <mat-grid-tile *ngFor="let project of projects">
+            <mat-card>
+                <mat-card-title>{{project.name}}</mat-card-title>
+                <mat-card-content>{{project.description}}</mat-card-content>
+                <mat-card-actions>
+                  <button mat-button class="mco-project-links" color="accent" style="border-bottom: 2px solid; font-weight: 600; font-size: 1.2em;">Demo Link</button>
+                  <button mat-button class="mco-project-links" color="accent" style="border-bottom: 2px solid; font-weight: 600; font-size: 1.2em;">Github Link</button>
+                </mat-card-actions>
+                <div class="mco-gallery">
+                    <mat-grid-list style="width:100%; text-align: center;" cols="6">
+                        <div *ngFor="let image of project.images; let i = index;" class="mco-thumbnails" >
+                            <img style="object-fit: cover;" (click)="openDialog(project.images, i)" src="{{image}}">
+                        </div>
+                    </mat-grid-list>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-expansion-panel>

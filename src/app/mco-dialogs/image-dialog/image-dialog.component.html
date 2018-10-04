@@ -1,0 +1,13 @@
+<div class="mco-terminal-header">
+  <div class="mco-terminal-header-button close-button"></div>
+  <div class="mco-terminal-header-button minimize-button"></div>
+  <div class="mco-terminal-header-button maximize-button"></div>
+</div>
+<div class="mco-terminal-content">
+  <img [src]="currentImage" style="width: 100%;" [@slideAnimation]>
+  <div class="mco-navigate-gallery">
+      <i class="material-icons" (click)="navigate('left')" style="float: left; margin-left: 30px">arrow_back_ios</i>
+      <i class="material-icons" (click)="navigate('right')" style="float: right; margin-right: 30px">arrow_forward_ios</i>
+  </div>
+</div>
+

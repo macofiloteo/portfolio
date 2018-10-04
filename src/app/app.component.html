@@ -1,5 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<button mat-raised-button>Test</button>
-<div typingAnimate style="color:white;">Hello Test</div>
+<div class="mco-header">
+    <div class="animate-type" typingAnimate>Hello World!%%I'm Maco!</div>
+</div>
+<div class="mco-content">
+    <mco-project></mco-project>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            Skills
+        </mat-expansion-panel-header>
+        <mat-grid-list cols="3">
+                <mat-grid-tile>1</mat-grid-tile>
+                <mat-grid-tile>2</mat-grid-tile>
+                <mat-grid-tile>3</mat-grid-tile>
+        </mat-grid-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            Random Stuff
+        </mat-expansion-panel-header>
+        <mat-grid-list cols="3">
+                <mat-grid-tile>1</mat-grid-tile>
+                <mat-grid-tile>2</mat-grid-tile>
+                <mat-grid-tile>3</mat-grid-tile>
+        </mat-grid-list>
+    </mat-expansion-panel>
+</div>
 <router-outlet></router-outlet>

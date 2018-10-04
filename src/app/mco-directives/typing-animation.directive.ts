@@ -1,38 +1,29 @@
 import { Directive, ElementRef,  } from '@angular/core';
+import Typed from 'typed.js';
 
 @Directive({
   selector: '[typingAnimate]'
 })
 export class TypingAnimationDirective {
-textToBeAnimated : string;
+textToBeAnimated : string[];
+typed : any;
 test : string = "hello";
   constructor(private el : ElementRef) { 
   }
 
   ngOnInit(){
-
-    this.textToBeAnimated = this.el.nativeElement.innerText;
-    console.log(this.el.nativeElement.innerText);
+    this.textToBeAnimated = this.el.nativeElement.innerText.split("%%");
     this.el.nativeElement.innerText = "";
-
-    var animateCallback = (i, lengthOfString) => {
-      setTimeout(() => {
-        var index0 = lengthOfString - i;
-        this.el.nativeElement.innerText = this.el.nativeElement.innerText + this.textToBeAnimated[index0];
-        if (--i) {                  // If i > 0, keep going
-          animateCallback(i, lengthOfString);  // Call the loop again
-        }
-      }, 300);
+    var options = {
+      strings: this.textToBeAnimated,
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true,
+      showCursor:false,
+      startDelay: 1000,
     }
-
-    animateCallback(this.textToBeAnimated.length, this.textToBeAnimated.length);
-    alert("done");
+    
+    this.typed = new Typed(".animate-type", options);
   }
 
-  timeout(delay) {
-    return new Promise(function(resolve, reject) {
-        setTimeout(resolve, delay);
-    });
-}
-  
 }

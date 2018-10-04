@@ -1,6 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
-
-body{
-    background-color: #000005;
+$theme-font-color: #ffffff;
+*{
+    font-family: "Ubuntu Mono";
 }
+body{
+    background-color: #1f1f1f;
+}
+
+.mco-header{
+    color: $theme-font-color;
+    font-size: 52px;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+.mco-header::after{
+    content:"_";
+    color: $theme-font-color;
+    animation: blinker 1s linear infinite;
+}
+
+.mco-content{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.mco-project-links{
+    border-bottom: 2px solid;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.mco-thumbnails{
+    width: 100px;
+    height: 100px;
+    margin: 2px 2px 2px 2px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.mco-thumbnails img{
+    display: inline-block;
+    width: 200px;
+    margin: -10px 0 0 -10px;
+}
+
+.animate-type{
+    color: $theme-font-color;
+    display: inline-block;
+}
+.animate-type::before{
+    content:"mco@prtfl:~$";
+    margin-right: 10px;
+    color:rgb(137, 225, 51);
+    display: inline-block;
+    font-weight: bold;
+}
+
+.mat-expansion-panel-header{
+    font-weight: bold !important;
+}
+
+.mat-card-actions{
+    text-align: center !important;
+}
+
+.mat-dialog-container{
+    padding: 0 0 0 0 !important;
+    border-radius: 8px 8px 8px 8px !important;
+}
+
+@keyframes blinker {
+    from,
+    49.9% {
+      opacity: 0;
+    }
+    50%,
+    to {
+      opacity: 1;
+    }
+  }
