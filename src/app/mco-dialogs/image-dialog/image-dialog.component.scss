@@ -3,7 +3,9 @@
     width: 100%;
     height: 20px;
 }
-
+.mco-terminal-content{
+    position: relative;
+}
 .mco-terminal-header-button{
     margin-left: 8px;
     border-radius: 50% !important;
@@ -27,6 +29,35 @@
 
 .mco-navigate-gallery{
     position: absolute !important;
-    top: 50% !important;
-    width: 80%
+    top: 0% !important;
+    width: 100%;
+    height: 100%;
+}
+
+.mco-navigate-arrows{
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(odd){
+        float: left;
+        background: linear-gradient(to left, rgba(104, 104, 104, 0.767), rgba(179, 179, 179, 0.082));
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+
+    }
+    &:nth-child(even){
+        float: right;
+        background: linear-gradient(to right, rgba(104, 104, 104, 0.767), rgba(179, 179, 179, 0.082));
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+    }
+    &:hover{
+        background: white; 
+        color: black;
+        transition: 0.3s all;
+        cursor: pointer;
+    }
 }
