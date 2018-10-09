@@ -3,6 +3,9 @@ import { McoProjectService } from './mco-project.service';
 import { McoProject } from './mco-project.model';
 import { ImageDialogComponent } from '../mco-dialogs/image-dialog/image-dialog.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { ObservableMedia } from '@angular/flex-layout';
+import { McoGridList } from '../mco-helpers/responsive-grid.helper';
 
 @Component({
   selector: 'mco-project',
@@ -10,11 +13,15 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
   styleUrls: ['./mco-project.component.scss']
 })
 export class McoProjectComponent implements OnInit {
-
-  constructor(private _mcoProjectService : McoProjectService, public dialog: MatDialog) { }
+  matGridNumber: Observable<number>;
+  grid: McoGridList;
+  constructor(private _mcoProjectService : McoProjectService, public dialog: MatDialog, private observableMedia: ObservableMedia) { 
+    this.grid = new McoGridList(observableMedia);
+  }
   projects : McoProject[]; 
   ngOnInit() {
     this._mcoProjectService.getAll().subscribe( data => this.projects = data);
+    this.matGridNumber = this.grid.responsive([1,1,1,3,3]);
   }
 
   openDialog(images, index): void {
@@ -24,12 +31,7 @@ export class McoProjectComponent implements OnInit {
       index: index
     };
     dialogConfig.width = '80%';
-
     const dialogRef = this.dialog.open(ImageDialogComponent, dialogConfig);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
   }
 
 }

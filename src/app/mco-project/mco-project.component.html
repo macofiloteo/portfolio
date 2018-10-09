@@ -2,10 +2,12 @@
     <mat-expansion-panel-header>
         Projects
     </mat-expansion-panel-header>
-    <mat-grid-list cols="3">
+    <mat-grid-list [cols]="matGridNumber | async">
         <mat-grid-tile *ngFor="let project of projects">
-            <mat-card>
-                <mat-card-title>{{project.name}}</mat-card-title>
+            <mat-card class="mco-card-project">
+                <mat-card-header>
+                    <mat-card-title>{{project.name}}</mat-card-title>
+                </mat-card-header>
                 <mat-card-content>{{project.description}}</mat-card-content>
                 <mat-card-actions>
                   <button mat-button class="mco-project-links" color="accent" style="border-bottom: 2px solid; font-weight: 600; font-size: 1.2em;">Demo Link</button>

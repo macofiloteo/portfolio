@@ -11,8 +11,12 @@ body{
 .mco-header{
     color: $theme-font-color;
     font-size: 52px;
-    margin-left: 200px;
-    margin-top: 150px;
+    margin-left: 150px;
+    margin-top: 80px;
+    @media only screen and (max-width: 768px) {
+        margin-left: 50px;
+        font-size: 16px;
+	}
 }
 
 .mco-header::after{
@@ -25,6 +29,9 @@ body{
     width: 80%;
     margin-top: 50px;
     margin-left: 150px;
+    @media only screen and (max-width: 768px) {
+        margin: 50px auto;
+	}
 }
 
 .mco-project-links{

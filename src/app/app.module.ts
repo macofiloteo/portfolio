@@ -9,6 +9,7 @@ import { TypingAnimationDirective } from './mco-directives/typing-animation.dire
 import { McoProjectComponent } from './mco-project/mco-project.component';
 import { McoProjectService } from './mco-project/mco-project.service';
 import { ImageDialogComponent } from './mco-dialogs/image-dialog/image-dialog.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ImageDialogComponent } from './mco-dialogs/image-dialog/image-dialog.co
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
   ],
   providers: [
     McoProjectService
