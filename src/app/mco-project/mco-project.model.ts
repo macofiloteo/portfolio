@@ -5,4 +5,5 @@ export class McoProject{
   githubLink: string;
   description: string;
   images: string[];
+  tags: string[];
 }

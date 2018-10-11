@@ -12,24 +12,27 @@ export class McoProjectService{
     this.dump = 
       [{
         name: "Project 1",
-        demoLink: "www.example.com",
-        githubLink: "www.github.com/example.com",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        images: ["/static/test_project.png", "/static/test2.png", "/static/test_project.png"]
+        demoLink: "www.zamboangacity.gov.ph:84",
+        githubLink: null,
+        tags: ["ASP.net", "MVC 5", "Angular 6", "Web API 2", "Javascript","C#"],
+        description: "Proprietary system made for the City Government of Zamboanga to manage ZamboCards and government services that are given to the people of Zamboanga City.",
+        images: ["/static/zambocard1.png", "/static/zambocard2.png", "/static/zambocard3.png", "/static/zambocard4.png", "/static/zambocard5.png", "/static/zambocard6.png"]
       },
       {
         name:"Project 2",
         demoLink: "www.example.com",
         githubLink: "www.github.com/example.com",
-        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        images: ["/static/test_project.png", "/static/test2.png", "/static/test_project.png"]
+        tags: ["Django", "GeoNode", "GeoServer", "GIS", "Python"],
+        description:"A map that shows gps coordinates with photos of restaurants, hotels, barangay halls, and tourist spots in Zamboanga City. Can be easily expanded to other establishment as long as geospatial data is supplied. The gps coordinates came from the intranet GIS (Geospatial Information System) web portal of the organization that was customized and deployed by me too. Sadly, I will not be able to include the source code of that project since it host sensitive data. The intranet project is base on GeoNode (you can simply look it up on Google).",
+        images: ["/static/zambophotomap1.png", "/static/zambophotomap2.png"]
       },
       {
         name:"Project 3",
-        demoLink: "www.example.com",
-        githubLink: "www.github.com/example.com",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        images: ["/static/test_project.png", "/static/test2.png", "/static/test_project.png"]
+        demoLink: null,
+        githubLink: "https://github.com/macofiloteo/screserve",
+        tags: ["Django", "Python"],
+        description: "Simple reservation system for the Sta. Cruz Island, the pink beach in Zamboanga City.",
+        images: ["/static/sc1.png", "/static/sc2.png", "/static/sc3.png", "/static/sc4.png", "/static/sc5.png", ]
       }]
   }
 

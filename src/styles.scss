@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+$title-font-size: 25px;
+$content-font-size: 18px;
 $theme-font-color: #ffffff;
 *{
     font-family: "Ubuntu Mono";
@@ -8,6 +10,9 @@ body{
     background-color: #1f1f1f;
 }
 
+button{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .mco-header{
     color: $theme-font-color;
     font-size: 52px;
@@ -33,7 +38,10 @@ body{
         margin: 50px auto;
 	}
 }
-
+.mco-footer{
+    margin: 50px auto;
+    width: 80%;
+}
 .mco-project-links{
     border-bottom: 2px solid;
     font-weight: 600;
@@ -54,6 +62,18 @@ body{
     margin: -10px 0 0 -10px;
 }
 
+.mco-tags{
+    display: inline-block;
+    margin-bottom: 10px;
+    & span{
+        padding: 7px 7px 7px 7px;
+        margin: 5px 3px 5px 3px;
+        border: solid 1px rgb(137, 225, 51);;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+}
+
 .animate-type{
     color: $theme-font-color;
     display: inline-block;
@@ -70,10 +90,27 @@ body{
     font-weight: bold !important;
 }
 
+.mat-card{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 10px 10px 10px;
+    @media only screen and (max-width: 768px) {
+        margin: 0 0 0 0;
+	}
+}
+.mat-card-title{
+    font-weight: bold !important;
+}
+
 .mat-card-actions{
     text-align: center !important;
 }
 
+.mat-card-actions .mat-card-button{
+    margin: 5px 5px 5px 5px;
+    &:hover{
+        cursor: pointer;
+    }
+}
 .mat-dialog-container{
     padding: 0 0 0 0 !important;
     border-radius: 8px 8px 8px 8px !important;

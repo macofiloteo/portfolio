@@ -4,26 +4,28 @@
     <div class="animate-type" typingAnimate>Hello World!%%I'm Maco!</div>
 </div>
 <div class="mco-content">
-    <mco-project></mco-project>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            Skills
-        </mat-expansion-panel-header>
-        <mat-grid-list [cols]="matGridNumber | async">
-                <mat-grid-tile>1</mat-grid-tile>
-                <mat-grid-tile>2</mat-grid-tile>
-                <mat-grid-tile>3</mat-grid-tile>
-        </mat-grid-list>
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            Random Stuff
-        </mat-expansion-panel-header>
-        <mat-grid-list cols="3">
-                <mat-grid-tile>1</mat-grid-tile>
-                <mat-grid-tile>2</mat-grid-tile>
-                <mat-grid-tile>3</mat-grid-tile>
-        </mat-grid-list>
-    </mat-expansion-panel>
+    <mat-tab-group>
+        <mat-tab label="Projects">
+            <mco-project></mco-project>
+        </mat-tab>
+        <mat-tab label="About Me">
+            <mat-grid-list [cols]="matGridNumber | async">
+                    <mat-grid-tile>1</mat-grid-tile>
+                    <mat-grid-tile>2</mat-grid-tile>
+                    <mat-grid-tile>3</mat-grid-tile>
+            </mat-grid-list>        
+        </mat-tab>
+        <mat-tab label="Random Stuff">
+            <mat-grid-list [cols]="matGridNumber | async">
+                    <mat-grid-tile>1</mat-grid-tile>
+                    <mat-grid-tile>2</mat-grid-tile>
+                    <mat-grid-tile>3</mat-grid-tile>
+            </mat-grid-list>               
+        </mat-tab>
+    </mat-tab-group>
+</div>
+<mat-divider></mat-divider> 
+<div class="mco-footer">
+    <div style="text-align: center;color:white" >macofiloteo@gmail.com</div>
 </div>
 <router-outlet></router-outlet>

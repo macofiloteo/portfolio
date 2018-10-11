@@ -17,7 +17,7 @@ export class AppComponent implements OnInit{
     this.grid = new McoGridList(observableMedia);
   }
   ngOnInit(){
-    this.matGridNumber = this.grid.responsive([1,1,2,2,3]);
+    this.matGridNumber = this.grid.responsive([1,1,2,3,3]);
   }
 }
 
