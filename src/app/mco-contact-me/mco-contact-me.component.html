@@ -1,0 +1,24 @@
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start;" fxLayoutAlign="center center" fxLayout="row">
+  <mat-card style="flex: 1 auto;" fxFlex="80%">
+<form id="form-contact" [formGroup]="senderForm" (submit)="onSubmit()">
+  <div style="font-size: 10px; float: right;">
+    {{currentTime}}
+  </div>
+  <mat-form-field class="senderName" color="accent">
+    <input matInput formControlName="senderName" placeholder="Name of Sender">
+        <mat-icon matSuffix>face</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="emailAddress" color="accent">
+    <input matInput formControlName="emailAddress" placeholder="Email Address">
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="message" color="accent">
+    <textarea cdkTextareaAutosize matInput formControlName="content" placeholder="Message"></textarea>
+    <mat-icon matSuffix>message</mat-icon>
+  </mat-form-field>
+  <button mat-raised-button type="submit">Let's talk!</button>
+  <br/>
+  <div *ngIf="isSuccess" style="font-size: 10px; float: right;">Message sent!</div>
+</form>
+</mat-card>
+</div>

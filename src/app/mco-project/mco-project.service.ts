@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class McoProjectService{
   private dump: McoProject[];
   constructor(private http: HttpClient) {
-    this.dump = 
+    this.dump =
       [{
         name: "Project 1",
         demoLink: "www.zamboangacity.gov.ph:84",
@@ -23,7 +23,7 @@ export class McoProjectService{
         demoLink: "www.example.com",
         githubLink: "www.github.com/example.com",
         tags: ["Django", "GeoNode", "GeoServer", "GIS", "Python"],
-        description:"A map that shows gps coordinates with photos of restaurants, hotels, barangay halls, and tourist spots in Zamboanga City. Can be easily expanded to other establishment as long as geospatial data is supplied. The gps coordinates came from the intranet GIS (Geospatial Information System) web portal of the organization that was customized and deployed by me too. Sadly, I will not be able to include the source code of that project since it host sensitive data. The intranet project is base on GeoNode (you can simply look it up on Google).",
+        description:"A map that shows gps coordinates with photos of restaurants, hotels, barangay halls, and tourist spots in Zamboanga City. An extension of a much larger project where shapefiles are uploaded (kinda like a portal for GIS data). Sadly, I will not be able to include the source code of that project since it host sensitive data.",
         images: ["/static/zambophotomap1.png", "/static/zambophotomap2.png"]
       },
       {
@@ -40,4 +40,3 @@ export class McoProjectService{
     return new Observable<McoProject[]>((subscriber: Subscriber<McoProject[]>) => subscriber.next(this.dump));
   }
 }
-

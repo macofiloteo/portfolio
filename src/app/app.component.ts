@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/internal/operators/map';
 import { startWith } from 'rxjs/operators';
 import { McoGridList } from './mco-helpers/responsive-grid.helper';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,12 @@ export class AppComponent implements OnInit{
   title = 'app';
   matGridNumber: Observable<number>;
   grid : McoGridList;
+
   constructor(private observableMedia: ObservableMedia){
     this.grid = new McoGridList(observableMedia);
+
   }
   ngOnInit(){
     this.matGridNumber = this.grid.responsive([1,1,2,3,3]);
   }
 }
-

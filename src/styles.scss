@@ -65,12 +65,18 @@ button{
 .mco-tags{
     display: inline-block;
     margin-bottom: 10px;
-    & span{
-        padding: 7px 7px 7px 7px;
+
+    & div{
+        display: inline-block;
+        padding: 4px 4px 4px 4px;
         margin: 5px 3px 5px 3px;
         border: solid 1px rgb(137, 225, 51);;
         border-radius: 5px;
         font-size: 12px;
+
+        &:before{
+          content:"#";
+        }
     }
 }
 

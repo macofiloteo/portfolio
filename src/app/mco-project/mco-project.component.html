@@ -1,12 +1,11 @@
-    <mat-grid-list [cols]="matGridNumber | async">
-        <mat-grid-tile *ngFor="let project of projects">
-            <mat-card class="mco-card-project">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start;" fxLayout="row" fxLayout.xs="column">
+            <mat-card style="flex: 1 auto;" class="mco-card-project" *ngFor="let project of projects" fxFlex="33%;" fxFlex.xs="80%">
                 <mat-card-header>
                     <mat-card-title class="mco-card-title">{{project.name}}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content class="mco-card-content">{{project.description }}</mat-card-content>
                 <div class="mco-tags">
-                    <span *ngFor="let tag of project.tags">{{tag}}</span>
+                    <div *ngFor="let tag of project.tags">{{tag}}</div>
                 </div>
                 <mat-card-actions>
                   <a *ngIf="project.demoLink" target="_blank" href="{{project.demoLink}}"><img class="mat-card-button" width="32" src="static/icons/hyperlink.svg"></a>
@@ -14,5 +13,4 @@
                   <a *ngIf="project.githubLink" target="_blank" href="{{project.githubLink}}"><img class="mat-card-button" width="32" src="static/icons/github.svg"></a>
                 </mat-card-actions>
             </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+</div>

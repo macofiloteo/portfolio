@@ -4,28 +4,20 @@
     <div class="animate-type" typingAnimate>Hello World!%%I'm Maco!</div>
 </div>
 <div class="mco-content">
-    <mat-tab-group>
+    <mat-tab-group dynamicHeight>
         <mat-tab label="Projects">
             <mco-project></mco-project>
         </mat-tab>
         <mat-tab label="About Me">
-            <mat-grid-list [cols]="matGridNumber | async">
-                    <mat-grid-tile>1</mat-grid-tile>
-                    <mat-grid-tile>2</mat-grid-tile>
-                    <mat-grid-tile>3</mat-grid-tile>
-            </mat-grid-list>        
+          <mco-about-me style="flex-direction: column; box-sizing: border-box; display: flex;"></mco-about-me>
+        </mat-tab>
+        <mat-tab label="Contact Me">
+          <mco-contact-me></mco-contact-me>
         </mat-tab>
         <mat-tab label="Random Stuff">
-            <mat-grid-list [cols]="matGridNumber | async">
-                    <mat-grid-tile>1</mat-grid-tile>
-                    <mat-grid-tile>2</mat-grid-tile>
-                    <mat-grid-tile>3</mat-grid-tile>
-            </mat-grid-list>               
+          <mco-random-stuff style="flex-direction: column; box-sizing: border-box; display: flex;"></mco-random-stuff>
         </mat-tab>
     </mat-tab-group>
 </div>
-<mat-divider></mat-divider> 
-<div class="mco-footer">
-    <div style="text-align: center;color:white" >macofiloteo@gmail.com</div>
-</div>
+<mat-divider></mat-divider>
 <router-outlet></router-outlet>
