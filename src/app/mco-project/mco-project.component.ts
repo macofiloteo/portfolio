@@ -6,6 +6,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { ObservableMedia } from '@angular/flex-layout';
 import { McoGridList } from '../mco-helpers/responsive-grid.helper';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'mco-project',
@@ -21,7 +22,7 @@ export class McoProjectComponent implements OnInit {
   projects : McoProject[]; 
   ngOnInit() {
     this._mcoProjectService.getAll().subscribe( data => this.projects = data);
-    this.matGridNumber = this.grid.responsive([1,1,1,3,3]);
+    this.matGridNumber = this.grid.responsive([1,1,1,1,1]);
   }
 
   openDialog(images, index): void {

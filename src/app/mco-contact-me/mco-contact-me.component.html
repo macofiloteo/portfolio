@@ -16,7 +16,7 @@
     <textarea cdkTextareaAutosize matInput formControlName="content" placeholder="Message"></textarea>
     <mat-icon matSuffix>message</mat-icon>
   </mat-form-field>
-  <button mat-raised-button type="submit">Let's talk!</button>
+  <button mat-raised-button [disabled]="!senderForm.valid" type="submit">Let's talk!</button>
   <br/>
   <div *ngIf="isSuccess" style="font-size: 10px; float: right;">Message sent!</div>
 </form>

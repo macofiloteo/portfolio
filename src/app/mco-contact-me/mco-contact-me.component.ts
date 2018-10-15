@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {McoMail} from './mco-mail.model';
 
 @Component({
@@ -14,9 +14,9 @@ export class McoContactMeComponent implements OnInit {
   senderForm : FormGroup;
   constructor(private db: AngularFireDatabase) {
     this.senderForm = new FormGroup({
-      senderName: new FormControl(''),
-      emailAddress: new FormControl(''),
-      content: new FormControl(''),
+      senderName: new FormControl('', [Validators.required]),
+      emailAddress: new FormControl('', [Validators.required]),
+      content: new FormControl('', [Validators.required]),
       dateSent: new FormControl('')
     });
 

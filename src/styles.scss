@@ -2,12 +2,12 @@
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 $title-font-size: 25px;
 $content-font-size: 18px;
-$theme-font-color: #ffffff;
+$theme-font-color: #ffffffff;
 *{
     font-family: "Ubuntu Mono";
 }
 body{
-    background-color: #1f1f1f;
+    background-color: #222233;
 }
 
 button{
@@ -97,16 +97,23 @@ button{
 }
 
 .mat-card{
+    background-color: #3b6378 !important;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px 10px 10px 10px;
     @media only screen and (max-width: 768px) {
         margin: 0 0 0 0;
-	}
+    }
 }
 .mat-card-title{
     font-weight: bold !important;
+    font-size: 20px !important;
+    color: $theme-font-color;
 }
-
+.mat-card-content{
+    font-size: 16px !important;
+    color: $theme-font-color;
+    text-align: justify;
+}
 .mat-card-actions{
     text-align: center !important;
 }
