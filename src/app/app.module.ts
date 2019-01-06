@@ -17,7 +17,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { McoContactMeComponent } from './mco-contact-me/mco-contact-me.component';
-
+import { MarkdownModule} from 'ngx-markdown';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +38,8 @@ import { McoContactMeComponent } from './mco-contact-me/mco-contact-me.component
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [
     McoProjectService

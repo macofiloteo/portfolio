@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 $title-font-size: 25px;
+$theme-font-family: "Open Sans";
 $content-font-size: 18px;
 $theme-font-color: #ffffffff;
 *{
-    font-family: "Ubuntu Mono";
+    font-family: $theme-font-family;
 }
 body{
     background-color: #222233;
@@ -32,7 +33,7 @@ button{
 
 .mco-content{
     width: 80%;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 150px;
     @media only screen and (max-width: 768px) {
         margin: 50px auto;
@@ -97,19 +98,26 @@ button{
 }
 
 .mat-card{
-    background-color: #3b6378 !important;
+    background-color: #313948 !important;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px 10px 10px 10px;
     @media only screen and (max-width: 768px) {
         margin: 0 0 0 0;
     }
+    & .mat-card-header-text{
+        margin: auto !important;
+        padding: 2px 2px 2px 2px;
+        border-bottom: 2px solid #6b9a61
+    }
 }
 .mat-card-title{
+    margin-bottom: 2px !important;
     font-weight: bold !important;
     font-size: 20px !important;
     color: $theme-font-color;
 }
 .mat-card-content{
+    margin-top: 10px;
     font-size: 16px !important;
     color: $theme-font-color;
     text-align: justify;

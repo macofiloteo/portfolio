@@ -3,15 +3,19 @@
       <mat-card-title class="mco-card-title">Who am I</mat-card-title>
   </mat-card-header>
   <mat-card-content class="mco-card-content">
-    {{about_me.who_am_i}}
+      <markdown [data]="about_me.who_am_i" ngPreserveWhitespaces></markdown>
   </mat-card-content>
 </mat-card>
 
+<!--
 <mat-card class="mco-card-aboutme" fxFlex="100%">
   <mat-card-header>
       <mat-card-title class="mco-card-title">What I plan to do</mat-card-title>
   </mat-card-header>
   <mat-card-content class="mco-card-content">
-      {{about_me.what_i_plan_to_do}}
+      <markdown [data]="about_me.what_i_plan_to_do" ngPreserveWhitespaces>
+      </markdown>
   </mat-card-content>
 </mat-card>
+-->
+
